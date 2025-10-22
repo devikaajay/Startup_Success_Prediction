@@ -1,0 +1,50 @@
+Rank,Company Name,Industry,Revenue (M USD),Profit (M USD),Employee Count,Headquarters,Success_Metric
+1,Walmart,Retail,680985.0,19436.0,2100000,United States,1
+2,Amazon,Retail information technology,637959.0,59248.0,1556000,United States,1
+3,State Grid Corporation of China,Electricity,545948.0,9204.0,1361423,China,1
+4,Saudi Aramco,Oil and gas,480446.0,106246.0,73311,Saudi Arabia,1
+5,China Petrochemical Corporation,Oil and gas,429700.0,9393.0,513434,China,1
+6,China National Petroleum Corporation,Oil and gas,476000.0,25250.0,1026301,China,1
+7,UnitedHealth Group,Healthcare,400278.0,14405.0,400000,United States,1
+8,Apple,Information technology,391035.0,93736.0,164000,United States,0
+9,Berkshire Hathaway,Financials,371433.0,88995.0,392400,United States,0
+10,CVS Health,Healthcare,357776.0,8344.0,259500,United States,0
+11,Alphabet,Information technology,350018.0,100118.0,183323,United States,0
+12,Volkswagen Group,Automotive,348408.0,17945.0,684025,Germany,0
+13,ExxonMobil,Oil and gas,344582.0,36010.0,61500,United States,0
+14,Vitol,Commodities,331000.0,13000.0,1560,Switzerland,0
+15,Shell,Oil and gas,323183.0,19359.0,103000,United Kingdom,0
+16,China State Construction Engineering,Construction,320431.0,4272.0,382894,China,0
+17,Toyota,Automotive,312018.0,34214.0,380793,Japan,0
+18,McKesson,Healthcare,308951.0,3002.0,48000,United States,0
+19,Cencora,Healthcare,262173.0,1745.0,44000,United States,0
+20,Microsoft,Information technology,245122.0,88136.0,228000,United States,0
+21,Trafigura,Commodities,244280.0,7393.0,12479,Singapore,0
+22,Costco,Retail,242290.0,6292.0,316000,United States,0
+23,JPMorgan Chase,Financials,239425.0,49552.0,309926,United States,0
+24,Industrial and Commercial Bank of China,Financials,222484.0,51417.0,419252,China,0
+25,TotalEnergies,Oil and gas,218945.0,21384.0,102579,France,0
+26,Glencore,Commodities,217829.0,4280.0,83426,Switzerland,0
+27,BP,Oil and gas,213032.0,15239.0,79400,United Kingdom,0
+28,Cardinal Health,Healthcare,205012.0,261.0,47520,United States,0
+29,Stellantis,Automotive,204908.0,20103.0,258275,Netherlands,0
+30,Chevron,Oil and gas,200949.0,21369.0,45600,United States,0
+31,China Construction Bank,Financials,199826.0,46990.0,376871,China,0
+32,Samsung Electronics,Electronics,198257.0,11082.0,267860,South Korea,0
+33,Foxconn,Electronics,197876.0,4563.0,621393,Taiwan,0
+34,Cigna,Healthcare,195265.0,5164.0,71413,United States,0
+35,Agricultural Bank of China,Financials,192398.0,38049.0,451003,China,0
+36,Schwarz Gruppe,Retail,180576.0,16988.0,595000,Germany,0
+37,China Railway Engineering Corporation,Construction,178563.0,2152.0,314149,China,0
+38,Cargill,Conglomerate,177000.0,17641.0,160000,United States,0
+39,Ford Motor Company,Automotive,176191.0,4347.0,177000,United States,0
+40,Bank of China,Financials,172328.0,32758.0,306931,China,0
+41,Bank of America,Financials,171912.0,26515.0,212985,United States,0
+42,General Motors,Automotive,171842.0,10127.0,163000,United States,0
+43,Elevance Health,Healthcare,171340.0,5987.0,104900,United States,0
+44,BMW Group,Automotive,168103.0,12205.0,154950,Germany,0
+45,Mercedes-Benz Group,Automotive,165638.0,15417.0,166056,Germany,0
+46,China Railway Construction Corporation,Construction,160847.0,1701.0,336433,China,0
+47,Baowu,Steel,157216.0,2494.0,258697,China,0
+48,Citigroup,Financials,156820.0,9228.0,237925,United States,0
+49,Enel,Energy,147100.0,3400.0,61060,Italy,0
