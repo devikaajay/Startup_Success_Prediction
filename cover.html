@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Page - Startup Success Prediction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Soft gradient background */
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide potential scrollbars */
+        }
+        .cover-container {
+            background-color: #ffffff; /* White background for content */
+            padding: 50px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+            text-align: center;
+            max-width: 700px;
+            width: 90%;
+            animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #007bff; /* Primary blue color */
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #5f728c;
+        }
+        .start-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #28a745; /* Success green */
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+        }
+        .start-button:hover {
+            background-color: #218838;
+            transform: translateY(-3px); /* Lift effect on hover */
+        }
+        .start-button:active {
+            transform: translateY(-1px); /* Press effect */
+        }
+        .footer-nav {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #999;
+        }
+        .footer-nav a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        .footer-nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="cover-container">
+        <h1>Startup Success Predictor</h1>
+        <p>Uncover the potential of your startup idea with our AI-powered prediction model. Discover the factors that contribute to a startup being highly funded.</p>
+        <a href="/intro" class="start-button">Get Started</a>
+        <div class="footer-nav">
+            &copy; 2024 Startup Predictor. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

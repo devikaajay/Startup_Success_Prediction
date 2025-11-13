@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Success Prediction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 40px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        input[type="number"], input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="number"]:focus, input[type="text"]:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            font-weight: 600;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        button:active {
+            transform: scale(0.99);
+        }
+        .result-box {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #e9f7ef;
+            border: 1px solid #c3e6cb;
+        }
+        .result-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .prediction-value {
+            font-size: 2em;
+            font-weight: 800;
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .prob-detail {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.5;
+        }
+        .error-message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Startup Success Prediction</h1>
+        <p style="text-align: center; color: #666;">Predicts the likelihood of success (Class 1) based on key startup attributes.</p>
+
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST" action="/">
+
+            <div class="form-group">
+                <label for="category_list">Industry Category (e.g., Software, Biotechnology):</label>
+                <input type="text" id="category_list" name="category_list" required value="Software">
+            </div>
+
+            <div class="form-group">
+                <label for="country_code">Country Code (e.g., USA, GBR, CAN):</label>
+                <input type="text" id="country_code" name="country_code" required value="USA">
+            </div>
+
+            <div class="form-group">
+                <label for="state_code">State/Province Code (e.g., CA, NY, BC):</label>
+                <input type="text" id="state_code" name="state_code" required value="CA">
+            </div>
+
+            <div class="form-group">
+                <label for="region">Region (e.g., SF Bay Area, Greater London):</label>
+                <input type="text" id="region" name="region" required value="SF Bay Area">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City (e.g., San Francisco, New York):</label>
+                <input type="text" id="city" name="city" required value="San Francisco">
+            </div>
+
+            <div class="form-group">
+                <label for="status">Current Status (operating, closed, acquired, ipo):</label>
+                <select id="status" name="status" required>
+                    <option value="operating">Operating</option>
+                    <option value="closed">Closed</option>
+                    <option value="acquired">Acquired</option>
+                    <option value="ipo">IPO</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="funding_rounds">Number of Funding Rounds (e.g., 3):</label>
+                <input type="number" id="funding_rounds" name="funding_rounds" required min="1" value="3">
+            </div>
+
+            <button type="submit">Predict Success</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <div class="result-title">Prediction Result:</div>
+            {% if result.class == 1 %}
+                <div class="prediction-value" style="color: #28a745;">
+                    SUCCESS ({{ result.probability }})
+                </div>
+                <p style="text-align: center; color: #28a745; font-weight: 600;">The model predicts this startup will be Highly Funded.</p>
+            {% else %}
+                <div class="prediction-value" style="color: #dc3545;">
+                    FAILURE ({{ result.probability }})
+                </div>
+                <p style="text-align: center; color: #dc3545; font-weight: 600;">The model predicts this startup will not be Highly Funded.</p>
+            {% endif %}
+
+            <hr style="border: 0; height: 1px; background: #ddd; margin: 15px 0;">
+            <div class="prob-detail">
+                <p style="font-weight: 600; text-align: center;">Probability Details:</p>
+                <ul>
+                    {% for class_name, probability in result.full_probs.items() %}
+                    <li>**Class {{ class_name }} ({{ 'Success' if class_name == 1 else 'Failure' }}):** {{ probability }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>
